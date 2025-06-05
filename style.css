@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  overflow: hidden;
+}
+
+.form-container::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+  border-radius: 50%;
+  top: -30px;
+  right: -30px;
+  opacity: 0.7;
+  animation: move 6s infinite alternate;
+}
+
+.form-container::after {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(45deg, #fbc2eb, #a6c1ee);
+  border-radius: 50%;
+  bottom: -40px;
+  left: -40px;
+  opacity: 0.6;
+  animation: move 6s infinite alternate-reverse;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(20px, 20px);
+  }
+}
+
+h1 {
+  margin-bottom: 25px;
+  font-size: 2rem;
+  color: #333;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  color: #555;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #333;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #ff8a00;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(255, 138, 0, 0.3);
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+button {
+  display: inline-block;
+  padding: 12px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  box-shadow: 0 10px 25px rgba(255, 138, 0, 0.4);
+  transform: translateY(-3px);
+}
+
+.error {
+  color: #e52e71;
+  font-size: 0.85rem;
+  display: none;
+  margin-top: 5px;
+  text-align: left;
+}
+
+#successMessage {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #4caf50;
+  font-weight: bold;
+}
